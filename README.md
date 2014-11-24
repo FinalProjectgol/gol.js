@@ -1,2 +1,2 @@
-gol.js
+Game of Life
 ======
