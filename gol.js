@@ -250,7 +250,13 @@ function countLiveNeighbors(grid, row, col){
      * Effects: Updates the liveNeighbors data member of each cell in grid
      */
     function updateLiveNeighbors(grid) {
-
+	for(i = 0; i < NUM_ROWS; i++)
+        {
+		for(j = 0; j < NUM_COLS; j++)
+		{
+			grid[i][j].liveNeighbors = countLiveNeighbors(grid, i, j);
+		}
+        }
     }
 
 
