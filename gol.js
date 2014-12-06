@@ -182,10 +182,66 @@ $(function () {
      * Effects: Counts the number of live neighbors for
      *          the cell at row,col in grid and returns the count.
      */
-    function countLiveNeighbors(grid, row, col){
-
+function countLiveNeighbors(grid, row, col){
+	var count = 0;
+	if(validPosition(row - 1, col - 1))
+	{
+		if(grid[row - 1][col - 1].dead == false)
+		{
+			count++;
+		}
+	}
+	if(validPosition(row - 1, col))
+	{
+		if(grid[row - 1][col].dead == false)
+		{
+			count++;
+		}
+	}
+	if(validPosition(row - 1, col + 1))
+	{
+		if(grid[row - 1][col + 1].dead == false)
+		{
+			count++;
+		}
+	}
+	if(validPosition(row, col - 1))
+	{
+		if(grid[row][col - 1].dead == false)
+		{
+			count++;
+		}
+	}
+	if(validPosition(row, col + 1))
+	{
+		if(grid[row - 1][col + 1].dead == false)
+		{
+			count++;
+		}
+	}
+	if(validPosition(row + 1, col - 1))
+	{
+		if(grid[row + 1][col - 1].dead == false)
+		{
+			count++;
+		}
+	}
+	if(validPosition(row + 1, col))
+	{
+		if(grid[row + 1][col].dead == false)
+		{
+			count++;
+		}
+	}
+	if(validPosition(row + 1, col + 1))
+	{
+		if(grid[row + 1][col + 1].dead == false)
+		{
+			count++;
+		}
+	}
+	return count;
     }
-
 
 
     /*
